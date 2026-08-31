@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Barra de navegación */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+button {
+    border: none;
+    background-color: #222;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Inicio */
+
+.inicio {
+    max-width: 1000px;
+    margin: auto;
+    min-height: 500px;
+    padding: 100px 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+.saludo {
+    color: #666;
+}
+
+.inicio h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.inicio p {
+    max-width: 550px;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 16px;
+
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+
+    transition: transform 0.2s;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Secciones */
+
+.seccion {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.seccion h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.seccion h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.seccion p {
+    max-width: 750px;
+    margin-bottom: 15px;
+}
+
+
+/* Habilidades */
+
+.habilidades {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.habilidades li {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 8px 14px;
+    border-radius: 4px;
+}
+
+
+/* Proyectos */
+
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.proyecto {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+
+    transition: transform 0.2s;
+}
+
+.proyecto:hover {
+    transform: translateY(-4px);
+}
+
+.proyecto h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.link-proyecto {
+    color: #222;
+    font-weight: bold;
+}
+
+
+/* Contacto */
+
+.contacto ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.contacto a {
+    color: #222;
+}
+
+form {
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+form button {
+    margin-top: 15px;
+    width: 100px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}
+
+
+/* Modo oscuro */
+
+body.oscuro {
+    background-color: #202020;
+    color: #eeeeee;
+}
+
+body.oscuro header {
+    background-color: #292929;
+    border-color: #444;
+}
+
+body.oscuro .nav-links a {
+    color: #eeeeee;
+}
+
+body.oscuro .habilidades li,
+body.oscuro .proyecto {
+    background-color: #292929;
+    border-color: #444;
+}
+
+body.oscuro .link-proyecto,
+body.oscuro .contacto a {
+    color: #eeeeee;
+}
+
+body.oscuro input,
+body.oscuro textarea {
+    background-color: #292929;
+    color: white;
+    border-color: #555;
+}
+
+
+/* Adaptación para celulares */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+    .proyectos {
+        grid-template-columns: 1fr;
+    }
+}
